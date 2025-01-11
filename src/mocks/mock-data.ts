@@ -23,6 +23,11 @@ export const categories = [
         role: ['']
     },
     {
+        name: 'Skill Management',
+        type: 'SkillManagement',
+        role: ['']
+    },
+    {
         name: 'Admin list developers',
         type: 'AdminListDevelopers',
         role: ['Admin']
