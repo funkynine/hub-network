@@ -4,7 +4,7 @@ const mockData = {};
 export const categories = [
     {
         name: 'Meetups',
-        type: 'Meetup',
+        type: 'Meetups',
         role: ['', 'Admin']
     },
     {

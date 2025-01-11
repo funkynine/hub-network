@@ -30,6 +30,9 @@ const ProfilePage = (props) => {
 			case 'SkillManagement':
                 navigate('skill-management')
                 break;
+			case 'Meetups':
+				navigate('meetups')
+				break;
             default:
                 break;
         }
