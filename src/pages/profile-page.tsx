@@ -1,12 +1,7 @@
 import { useState } from 'react';
 import ModalEnterLink from '../components/Modal.tsx';
 import Plate from '../components/plate.tsx';
-import viteLogo from '/vite.svg';
-import { categories } from '../mocks/mock-data.ts';
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ModalEnterLink from "../components/Modal.tsx";
-import Plate from "../components/plate.tsx";
 import viteLogo from '/vite.svg'
 import { categories } from '../mocks/mock-data.ts'
 import './profile-page.css';
