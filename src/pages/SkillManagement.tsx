@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import Plate from '../components/plate.tsx';
 import './SkillManagement.css';
 
 const SkillsManagement = () => {
     const [skills, setSkills] = useState(JSON.parse(localStorage.getItem('skills')) ?? []);
     const [newSkill, setNewSkill] = useState("");
+    const navigation = useNavigate()
 
     const addSkill = () => {
         if (newSkill && !skills?.includes(newSkill)) {
@@ -15,6 +17,10 @@ const SkillsManagement = () => {
         }
     };
 
+    const goBack = () => {
+        navigation('/')
+    }
+
     const removeSkill = (index) => {
         const result = skills.filter((_, i) => i !== index);
         localStorage.setItem('skills', JSON.stringify(result));
@@ -23,6 +29,7 @@ const SkillsManagement = () => {
 
     return (
         <div className="skills-management">
+            <div className="back" onClick={goBack}>Back</div>
             <div className="skills-management">
                 <h2>Manage Skills</h2>
 
