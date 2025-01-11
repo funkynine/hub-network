@@ -13,8 +13,6 @@ function App() {
             <Route path="/admin-list-developers" element={<AdminListDevelopers />} />
             <Route path="/x" element={<EmployeeSchedule/>}/>
             <Route path="/skill-management" element={<SkillsManagement />} />
-            {/*<Route path="/planing" element={<CarerPlaning />} />*/}
-            {/*<Route path="/cv" element={<GeneratorCV />} />*/}
         </Routes>
       </Router>
   )
