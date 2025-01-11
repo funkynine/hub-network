@@ -10,7 +10,7 @@ import { generatePdf } from '../shared/pdfGeneratorCV.ts';
 const ProfilePage = (props) => {
     const [modalState, setModalState] = useState(false)
     const navigate = useNavigate();
-    const userRole = '';
+    const userRole = 'Admin';
     const skills =  JSON.parse(localStorage.getItem('skills'));
 
     const handleClickCategory = (category) => {
