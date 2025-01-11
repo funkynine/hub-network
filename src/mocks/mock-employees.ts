@@ -1,0 +1,61 @@
+// mock-employees.ts
+export const mockData = [
+    {
+      key: "1",
+      name: "Ihor Bazyliuk",
+      englishLevel: "Intermediate",
+      position: "Seniour",
+      workload: "Full",
+      projects: { projectA: true, projectB: false, projectC: true },
+    },
+    {
+      key: "2",
+      name: "Illia Khirilov",
+      englishLevel: "Upper-Intermediate",
+      position: "Seniour",
+      workload: "Part-time",
+      projects: { projectA: true, projectB: true, projectC: false },
+    },
+    {
+        key: "3",
+        name: "Anastasiia Yemelianova",
+        englishLevel: "Intermediate",
+        position: "Middle",
+        workload: "Full",
+        projects: { projectA: true, projectB: true, projectC: false },
+      },
+      {
+        key: "4",
+        name: "Yuliia Kozak",
+        englishLevel: "Upper-Intermediate",
+        position: "Junior",
+        workload: "Bench",
+        projects: { projectA: true, projectB: true, projectC: false },
+      },
+      {
+        key: "5",
+        name: "Oleksandr Bohotskyi",
+        englishLevel: "Intermediate",
+        mentor: "Volodymyr Mahuran",
+        position: "trainee",
+        workload: "Part-time",
+        projects: { projectA: true, projectB: true, projectC: false },
+      },
+      {
+        key: "6",
+        name: "Volodymyr Mahuran",
+        englishLevel: "Upper-Intermediate",
+        position: "Middle",
+        workload: "Part-time",
+        projects: { projectA: true, projectB: true, projectC: false },
+      },
+      {
+        key: "7",
+        name: "Semen Odnostalko",
+        englishLevel: "Upper-Intermediate",
+        position: "Middle",
+        workload: "Full",
+        projects: { projectA: true, projectB: true, projectC: false },
+      },
+  ];
+  

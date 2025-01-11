@@ -1,0 +1,47 @@
+.table-container {
+  background: transparent; /* Фон контейнера таблиці прозорий */
+  width: 100%; /* Займає всю ширину */
+  margin: 0; /* Без зовнішніх відступів */
+  padding: 0; 
+}
+
+.ant-table {
+  background-color: transparent !important; /* Фон таблиці прозорий */
+  border: 1px solid white !important; /* Білі рамки таблиці */
+  color: white !important; /* Білий текст */
+}
+
+.ant-table-thead > tr > th {
+  background-color: transparent !important; /* Прозорий фон заголовків */
+  color: white !important; /* Білий текст заголовків */
+  border-bottom: 1px solid white !important; /* Біла нижня рамка заголовків */
+}
+
+.ant-table-tbody > tr > td {
+  background-color: transparent !important; /* Прозорий фон комірок */
+  color: white !important; /* Білий текст у комірках */
+  border-bottom: 1px solid white !important; /* Біла нижня рамка комірок */
+}
+
+.ant-checkbox-disabled + span {
+  color: white !important; /* Білий текст для підписів до disabled чекбоксів */
+}
+
+.ant-tag {
+  color: white !important; /* Білий текст у тегах */
+}
+
+.ant-tag-blue {
+  background-color: rgba(0, 123, 255, 0.2) !important; /* Напівпрозорий синій для тегів Part-time */
+  border-color: rgba(0, 123, 255, 0.5) !important;
+}
+
+.ant-tag-green {
+  background-color: rgba(40, 167, 69, 0.2) !important; /* Напівпрозорий зелений для тегів Full-time */
+  border-color: rgba(40, 167, 69, 0.5) !important;
+}
+
+.ant-tag-red {
+  background-color: rgba(220, 53, 69, 0.2) !important; /* Напівпрозорий червоний для тегів Bench */
+  border-color: rgba(220, 53, 69, 0.5) !important;
+}

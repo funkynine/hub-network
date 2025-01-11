@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, DatePicker, Table, Typography } from 'antd';
+import { useNavigate } from 'react-router-dom';
 import { FormMessages } from '../constants/career-planning-form-messages.const';
 const { TextArea } = Input;
 const { Title } = Typography;
+import './career-planning-page.scss';
 
 const CareerPlanningPage = () => {
+	const navigation = useNavigate();
 	const [formData, setFormData] = useState({
 		employeeName: '',
 		overalExperience: '',
@@ -23,15 +26,6 @@ const CareerPlanningPage = () => {
 
 	const handleSubmit = () => {
 		console.log('Form values:', formData);
-	};
-
-	const initialValues = {
-		employeeName: 'John Doe',
-		overallExperience: '5 years',
-		expWithFive: '2 years',
-		meetingDate: '2025-01-15',
-		reviewPeriod: '6 months',
-		skills: 'React, Redux, Team Collaboration',
 	};
 
 	const columns = [
@@ -86,8 +80,15 @@ const CareerPlanningPage = () => {
 		},
 	];
 
+	const goBack = () => {
+		navigation('/');
+	};
+
 	return (
 		<div style={{ padding: '0px 20px' }}>
+			<div className="back" onClick={goBack}>
+				Back
+			</div>
 			<Title level={1} style={{ color: 'white' }}>
 				Career Planning Form
 			</Title>
@@ -96,40 +97,55 @@ const CareerPlanningPage = () => {
 					label={<span style={{ color: 'white' }}>Employee Name</span>}
 					name="employeeName"
 					rules={[{ required: true, message: FormMessages.Name }]}
-					initialValue={'John Doe'}
 				>
-					<Input placeholder="Enter employee name" onChange={handleInputChange} />
+					<div className="add-skill">
+						<Input
+							placeholder="Enter employee name"
+							onChange={handleInputChange}
+							defaultValue={'John Doe'}
+						/>
+					</div>
 				</Form.Item>
 				<Form.Item
 					label={<span style={{ color: 'white' }}>Overall Experience</span>}
 					name="overallExperience"
 					rules={[{ required: true, message: FormMessages.Exp }]}
-					initialValue={'5 years'}
 				>
-					<Input placeholder="Enter overall experience" onChange={handleInputChange} />
+					<div className="add-skill">
+						<Input
+							placeholder="Enter overall experience"
+							onChange={handleInputChange}
+							defaultValue={'5 years'}
+						/>
+					</div>
 				</Form.Item>
 				<Form.Item
 					label={<span style={{ color: 'white' }}>Exp with Five</span>}
 					name="expWithFive"
 					rules={[{ required: true, message: FormMessages.ExpWithFive }]}
-					initialValue={'3 years'}
 				>
-					<Input placeholder="Enter experience with Five" />
+					<div className="add-skill">
+						<Input placeholder="Enter experience with Five" defaultValue={'3 years'} />
+					</div>
 				</Form.Item>
 				<Form.Item
 					label={<span style={{ color: 'white' }}>Meeting Date</span>}
 					name="meetingDate"
 					rules={[{ required: true, message: FormMessages.MeetDate }]}
 				>
-					<DatePicker style={{ width: '100%' }} />
+					<div className="add-skill">
+						<DatePicker style={{ width: '100%' }} />
+					</div>
 				</Form.Item>
 				<Form.Item
 					label={<span style={{ color: 'white' }}>Review Period</span>}
 					name="reviewPeriod"
 					rules={[{ required: true, message: FormMessages.ReviewPeriod }]}
-					initialValue={'6 months'}
 				>
-					<Input placeholder="Enter review period" />
+					{' '}
+					<div className="add-skill">
+						<Input placeholder="Enter review period" defaultValue={'6 months'} />
+					</div>
 				</Form.Item>
 				<Table
 					dataSource={dataSource}
