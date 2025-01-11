@@ -1,15 +1,17 @@
 import './assets/styles/main.scss';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
+import ProfilePage from "./pages/profile-page.tsx";
 
 function App() {
-
-
   return (
-      <>
-          <div className="App">
-              <h1>Hello, React with SCSS!</h1>
-          </div>
-      </>
+      <Router>
+        <Routes>
+            <Route path="/" element={<ProfilePage />} />
+            {/*<Route path="/planing" element={<CarerPlaning />} />*/}
+            {/*<Route path="/cv" element={<GeneratorCV />} />*/}
+        </Routes>
+      </Router>
   )
 }
 
