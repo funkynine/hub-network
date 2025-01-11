@@ -1,8 +1,10 @@
+import './index.css';
 
-
-const Plate = (props) => {
+const Plate = ({children, isClickable}) => {
     return (
-        <div>Plate</div>
+        <div className={'plate ' + (isClickable ? 'clickable' : '' )}>
+            {children}
+        </div>
     );
 }
 
