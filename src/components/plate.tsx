@@ -5,7 +5,7 @@ const Plate = ({ children, isClickable, onClick }) => {
         <div
             className={'plate ' + (isClickable ? 'clickable' : '')}
             onClick={onClick}
-            style={{ cursor: isClickable ? 'pointer' : 'default' }}
+            style={{ cursor: isClickable ? 'pointer' : 'default' }} 
         >
             {children}
         </div>

@@ -1,0 +1,17 @@
+.plate {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 24px;
+    background-color: #1b2730;
+    padding: 24px;
+}
+
+.clickable:hover {
+    box-shadow: 0 4px 8px rgba(83, 91, 242, 0.1);
+    background-color: #373f4d;
+    cursor: pointer;
+}
