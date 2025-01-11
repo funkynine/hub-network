@@ -11,7 +11,7 @@ function App() {
         <Routes>
             <Route path="/" element={<ProfilePage />} />
             <Route path="/admin-list-developers" element={<AdminListDevelopers />} />
-            <Route path="/x" element={<EmployeeSchedule/>}/>
+            <Route path="/meetups" element={<EmployeeSchedule/>}/>
             <Route path="/skill-management" element={<SkillsManagement />} />
         </Routes>
       </Router>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Table} from 'antd';
-
+import './meetup-page.css'
 
 const columns = [
 	{
@@ -101,6 +101,7 @@ const EmployeeSchedule: React.FC = () => (
 			rowExpandable: (record) => record.name !== 'Not Expandable',
 		}}
 		dataSource={sortedData}
+
 	/>
 );
 
