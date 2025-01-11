@@ -1,9 +1,5 @@
-
-
-const Plate = (props) => {
-    return (
-        <div>Plate</div>
-    );
-}
+const Plate = () => {
+	return <div>Plate</div>;
+};
 
 export default Plate;

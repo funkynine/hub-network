@@ -1,8 +1,5 @@
-
-const ProfilePage = (props) => {
-    return (
-        <div>Profile page</div>
-    );
-}
+const ProfilePage = () => {
+	return <div>Profile page</div>;
+};
 
 export default ProfilePage;
