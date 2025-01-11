@@ -50,3 +50,21 @@
 .hide {
     display: none;
 }
+
+.toggle-role-button {
+    background-color: #2f3844;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 16px;
+    width: 150px;
+    height: 50px;
+}
+
+.toggle-role-button:hover {
+    background-color: #3b4957;
+}
+
