@@ -44,3 +44,7 @@
     border-radius: 12px;
     margin: 8px 4px;
 }
+
+.hide {
+    display: none;
+}
