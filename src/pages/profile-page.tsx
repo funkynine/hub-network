@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ModalEnterLink from "../components/Modal.tsx";
 import Plate from "../components/plate.tsx";
 import viteLogo from '/vite.svg'
@@ -7,18 +8,25 @@ import './profile-page.css';
 
 const ProfilePage = (props) => {
     const [modalState, setModalState] = useState(false)
+    const navigate = useNavigate();
     const userRole = '';
 
     const handleClickCategory = (category) => {
-        if (category.type === 'DailyReports') {
-            const link = localStorage.getItem('dailyReportLink');
-            console.log("=>(profile-page.tsx:16) link", link);
+        switch (category.type) {
+            case 'DailyReports':
+                const link = localStorage.getItem('dailyReportLink');
 
-            if (link) {
-                window.open(link);
-            } else {
-                setModalState(true);
-            }
+                if (link) {
+                    window.open(link);
+                } else {
+                    setModalState(true);
+                }
+                break;
+            case 'AdminListDevelopers':
+                navigate('admin-list-developers')
+                break;
+            default:
+                break;
         }
     }
 

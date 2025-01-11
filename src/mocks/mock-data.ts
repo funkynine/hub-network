@@ -20,7 +20,7 @@ export const categories = [
     {
         name: 'Daily reports',
         type: 'DailyReports',
-        role: ['', 'Admin']
+        role: ['']
     },
     {
         name: 'Admin list developers',
