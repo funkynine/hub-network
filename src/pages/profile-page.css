@@ -25,10 +25,12 @@
 
 .name {
     font-size: 20px;
+    align-self: end;
 }
 
 .position {
     color: darkgrey;
+    align-self: start;
 }
 
 .skills {

@@ -11,6 +11,7 @@ const ProfilePage = (props) => {
     const [modalState, setModalState] = useState(false)
     const navigate = useNavigate();
     const userRole = '';
+    const skills =  JSON.parse(localStorage.getItem('skills'));
 
     const handleClickCategory = (category) => {
         switch (category.type) {
@@ -25,6 +26,9 @@ const ProfilePage = (props) => {
                 break;
             case 'AdminListDevelopers':
                 navigate('admin-list-developers')
+                break;
+			case 'SkillManagement':
+                navigate('skill-management')
                 break;
             default:
                 break;
@@ -41,9 +45,7 @@ const ProfilePage = (props) => {
 					<div className="name">Ihor Bazyliuk</div>
 					<div className="position">Front-end hub leader</div>
 					<div className="skills">
-						<div className="skill-label">React</div>
-						<div className="skill-label">Angular</div>
-						<div className="skill-label">Vue</div>
+                        {skills?.length && skills.map((skill) => (<div className="skill-label">{skill}</div>))}
 					</div>
 				</Plate>
 
